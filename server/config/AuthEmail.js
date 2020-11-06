@@ -14,8 +14,8 @@ const path = require('path') // Bring in PATH
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'pedromiotti7@gmail.com',
-        pass: 'pedro123456789'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWD
     },
     tls: {
          rejectUnauthorized: false 
