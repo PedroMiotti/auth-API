@@ -56,10 +56,11 @@ const sendConfirmationEmail = (emailUsuario) => {
     // Enviando o email
     transporter.sendMail(ConfirmacaoEmail, (error, info) => {
         if(error){
-            console.log(error)
+            console.log("Erro ao enviar o e-mail : " + error)
         }
         else{
             console.log('Email enviado com sucesso' + info.response)
+       
         }
 
     })
