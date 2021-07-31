@@ -91,6 +91,8 @@ const jwtSecret = require('./jwt') // Secret Key
 
     passport.use('jwt', new JWTstrategy(config, (jwt_payload, done) => {
         // Achando o usuario pelo email que e enviado pelo client by the token
+        
+        
         Usuario.findOne({email: jwt_payload.email}).then(usuario => {
             // Se achar o usuario
             if(usuario){
